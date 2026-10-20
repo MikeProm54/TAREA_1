@@ -1,0 +1,99 @@
+/* EL PRINCIPAÑ */
+:root {
+  --azul: #0B4A9E;
+  --cielo: #C6D6EE;
+  --fondo: #EEF0F2;
+  --naranja: #F59E5B;
+  --tinta: #14202B;
+  --blanco: #FFFFFF;
+  --acento: #B5470F;
+  --titulos: Arial, Helvetica, sans-serif;
+  --texto: Arial, Helvetica, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0; background: var(--fondo); color: var(--tinta);
+  font-family: var(--texto); font-size: 1.0625rem; line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: var(--titulos); font-weight: 700; line-height: 1.2; margin: 0 0 .6em; color: var(--azul); }
+h2 { font-size: clamp(1.4rem, 3.5vw, 2rem); }
+h3 { font-size: 1.05rem; }
+p { max-width: 60ch; margin: 0 0 1em; }
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--azul); text-underline-offset: .2em; }
+a:hover { color: var(--acento); }
+:focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; }
+
+.salto { position: absolute; left: 1rem; top: -4rem; background: var(--tinta); color: var(--blanco); padding: .6rem 1rem; z-index: 10; }
+.salto:focus { top: 1rem; }
+
+/* Aviso y menú */
+.aviso {
+  background: var(--naranja); color: var(--tinta); text-align: center; max-width: none;
+  margin: 0; padding: .5rem 1rem; font-size: .8rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase;
+}
+.menu { display: flex; justify-content: space-between; align-items: center; max-width: 72rem; margin: 0 auto; padding: 1rem 1.5rem; }
+.menu-enlaces { display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0; }
+.menu-enlaces a { color: var(--azul); font-weight: 600; text-decoration: none; }
+.menu-enlaces a:hover { text-decoration: underline; }
+
+/* Hero */
+.hero { background: var(--cielo); display: grid; grid-template-columns: 1fr; align-items: center; gap: 1rem; max-width: 72rem; margin: 0 auto; border-radius: 8px; overflow: hidden; }
+.hero-texto { padding: 2rem 1.5rem 0; }
+#inicio h1 { font-size: clamp(1.8rem, 7vw, 2.75rem); overflow-wrap: anywhere; margin-bottom: .25em; text-transform: uppercase; }
+.razon { font-weight: 600; color: var(--azul); margin-bottom: 1.25em; }
+.boton {
+  display: inline-block; border: 2px solid var(--azul); color: var(--azul); background: transparent;
+  padding: .7rem 1.4rem; font-weight: 600; text-decoration: none; text-transform: uppercase; font-size: .85rem; letter-spacing: .05em;
+}
+.boton:hover { background: var(--azul); color: var(--blanco); }
+
+/* Secciones */
+.seccion { max-width: 72rem; margin: 0 auto; padding: 3.5rem 1.5rem 0; }
+.rejilla { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+.producto img { border-radius: 8px; width: 100%; margin-bottom: 1rem; }
+.precio { font-weight: 600; color: var(--azul); margin-bottom: .5em; }
+.producto a { font-weight: 600; }
+
+.mision-vision { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin: 0; }
+.mision-vision div { background: var(--naranja); color: var(--tinta); border-radius: 8px; padding: 1.5rem; }
+.mision-vision dt { font-family: var(--titulos); font-weight: 700; color: var(--tinta); margin-bottom: .5rem; }
+.mision-vision dd { margin: 0; max-width: 44ch; }
+
+/* Formulario */
+#formulario { max-width: 36rem; }
+.campo { margin-bottom: 1.25rem; }
+label { display: block; font-weight: 600; margin-bottom: .35rem; }
+input, textarea { width: 100%; font: inherit; color: var(--tinta); background: var(--blanco); border: 2px solid #5B6B77; border-radius: 4px; padding: .7rem .8rem; }
+button { font: inherit; font-weight: 600; cursor: pointer; background: var(--azul); color: var(--blanco); border: 0; border-radius: 4px; padding: .8rem 1.6rem; }
+button:hover { background: var(--acento); }
+
+/* Pie */
+.pie { background: var(--azul); color: var(--blanco); padding: 2rem 1.5rem; margin-top: 4rem; }
+.pie p { max-width: none; margin: 0 0 1rem; }
+.redes { display: flex; flex-wrap: wrap; gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
+.pie a { color: #DCE8FA; }
+.pie a:hover { color: #FFD9B8; }
+
+/* Escritorio */
+@media (min-width: 48rem) {
+  .hero { grid-template-columns: 4fr 6fr; gap: 0; }
+  .hero-texto { padding: 3rem 0 3rem 3rem; }
+  .rejilla, .mision-vision { grid-template-columns: repeat(3, 1fr); }
+  .mision-vision { grid-template-columns: 1fr 1fr; }
+  .pie { display: flex; justify-content: space-between; align-items: center; }
+  .pie p { margin: 0; }
+}
+
+/* TELEFONO */
+@media (max-width: 30rem) {
+  body { font-size: 1rem; }
+  .menu-enlaces { gap: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

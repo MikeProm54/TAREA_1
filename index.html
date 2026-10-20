@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Barro y Esmalte Metepec: taller de cerámica artesanal en Metepec, Estado de México. Vajillas, árboles de la vida y talleres.">
+  <title>Barro y Esmalte Metepec | Cerámica artesanal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="salto" href="#productos">Saltar al contenido</a>
+
+  <header id="inicio">
+    <p class="aviso">Envíos a todo México en pedidos superiores a $1,000</p>
+    <nav class="menu" aria-label="Principal">
+      <a class="logo" href="#inicio"><img src="imagenes/logo.png" alt="Logotipo de Barro y Esmalte" width="190" height="32"></a>
+      <ul class="menu-enlaces">
+        <li><a href="#productos">Proyectos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-texto">
+        <h1>Barro y Esmalte</h1>
+        <p class="razon">Barro y Esmalte Metepec, S.A. de C.V.</p>
+        <p>Somos un taller familiar de cerámica artesanal. Hacemos vajillas, árboles de la vida y piezas por encargo con barro de la región y esmaltes sin plomo.</p>
+        <a class="boton" href="#productos">Ver proyectos</a>
+      </div>
+      <img class="hero-imagen" src="imagenes/arbol_de_la_vida.png" alt="un árbol de la vida de barro" width="600" height="420">
+    </div>
+  </header>
+
+  <main>
+    <section id="productos" class="seccion" aria-labelledby="titulo-productos">
+      <h2 id="titulo-productos">Proyectos destacados</h2>
+      <div class="rejilla">
+        <article class="producto">
+          <img src="imagenes/taza_azul.png" alt="Taza con esmalte azul" width="200" height="160">
+          <h3>Vajilla Lago Azul</h3>
+          <p>Platos, tazas y cuencos para uso diario. Esmalte azul resistente al lavavajillas, hecha en tandas pequeñas.</p>
+          <p class="precio">Desde $450</p>
+          <a href="#contacto">Cotizar una vajilla</a>
+        </article>
+        <article class="producto">
+          <img src="imagenes/arbol_flores.png" alt="Árbol de la vida de barro con ramas y flores de colores" width="200" height="160">
+          <h3>Árbol de la vida por encargo</h3>
+          <p>Piezas modeladas a mano para bodas, aniversarios y homenajes, con los nombres o figuras que la familia elija.</p>
+          <p class="precio">Desde $1,200</p>
+          <a href="#contacto">Encargar un árbol</a>
+        </article>
+        <article class="producto">
+          <img src="imagenes/curso_barro.png" alt="Vasija de barro sobre la mesa de un torno de alfarería" width="200" height="160">
+          <h3>Taller de torno para principiantes</h3>
+          <p>Sesiones de tres horas los sábados, en grupos de hasta ocho personas. Incluye barro, herramientas y horneado.</p>
+          <p class="precio">$600 por persona</p>
+          <a href="#contacto">Reservar lugar</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="nosotros" class="seccion" aria-labelledby="titulo-nosotros">
+      <h2 id="titulo-nosotros">Sobre nosotros</h2>
+      <dl class="mision-vision">
+        <div>
+          <dt>Misión</dt>
+          <dd>Conservar la alfarería de Metepec haciendo piezas útiles, duraderas y bien pagadas a quienes las elaboran.</dd>
+        </div>
+        <div>
+          <dt>Visión</dt>
+          <dd>Ser el taller de referencia en México para cerámica de uso diario con identidad local.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="contacto" class="seccion" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contacto</h2>
+      <p>Cuéntanos qué pieza necesitas. Respondemos en un plazo de dos días hábiles.</p>
+      <form id="formulario" action="#" method="post">
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required minlength="3">
+        </div>
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" autocomplete="email" required>
+        </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required minlength="10"></textarea>
+        </div>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>&copy; 2026 Barro y Esmalte Metepec, S.A. de C.V. Todos los derechos reservados.</p>
+    <ul class="redes">
+      <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+    </ul>
+  </footer>
+</body>
+</html>
